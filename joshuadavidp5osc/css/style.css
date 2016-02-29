@@ -1,0 +1,24 @@
+body {
+  background-color: #000;
+  font-family: 'Droid Sans', sans-serif;
+}
+
+h1 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+ 	font-size: 6em;
+ 	color: rgb(200, 200, 200);
+ 	padding: 0 40px;
+ 	font-weight: 900;
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100%;
+    /*background-color: #fff;*/
+}
