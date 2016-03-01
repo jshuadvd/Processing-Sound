@@ -13,6 +13,7 @@ function setup() {
   osc.start();
 }
 
+// Draw Function
 function draw() {
   background(20);
 
