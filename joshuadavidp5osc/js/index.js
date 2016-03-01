@@ -1,10 +1,11 @@
-var osc, 
+var osc,
     fft;
 
 function setup() {
   createCanvas(820, 256);
 
-  osc = new p5.TriOsc(); // set frequency and type
+  // set frequency and type
+  osc = new p5.TriOsc();
   osc.amp(.5);
   osc.phase(1);
 
@@ -15,7 +16,8 @@ function setup() {
 function draw() {
   background(20);
 
-  var waveform = fft.waveform();  // analyze the waveform
+  // analyze the waveform
+  var waveform = fft.waveform();
   beginShape();
   strokeWeight(5);
   for (var i = 0; i < waveform.length; i++){
