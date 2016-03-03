@@ -10,7 +10,7 @@ function setup() {
   osc.phase(1);
 
   fft = new p5.FFT();
-  osc.start();
+  //osc.start();
 }
 
 // Draw Function
@@ -20,7 +20,12 @@ function draw() {
   // analyze the waveform
   var waveform = fft.waveform();
   beginShape();
+  fill(random(255), 127);
+  // noStroke();
+  smooth();
   strokeWeight(5);
+  stroke(random(255));
+  
   for (var i = 0; i < waveform.length; i++){
     var x = map(i, 0, waveform.length, 0, width);
     var y = map(waveform[i], -1, 1, height, 0);
@@ -35,20 +40,6 @@ function draw() {
   var amp = map(mouseY, 0, height, 1, .01);
   osc.amp(amp);
 
-  if (mouseX > width) {
-    oscTri.stop();
-  }
 
-  if (mouseX < height) {
-    oscTri.start();
-  }
-
-  if (mouseY > height) {
-    oscTri.stop();
-  }
-
-  if (mouseY < height) {
-    oscTri.start();
-  }
 
 }
