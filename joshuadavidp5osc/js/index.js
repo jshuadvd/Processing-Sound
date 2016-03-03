@@ -2,7 +2,7 @@ var osc,
     fft;
 
 function setup() {
-  createCanvas(820, 256);
+  var cnv = createCanvas(820, 256);
 
   // set frequency and type
   osc = new p5.TriOsc();
@@ -10,7 +10,8 @@ function setup() {
   osc.phase(1);
 
   fft = new p5.FFT();
-  //osc.start();
+  osc.start();
+  toggleAudio(cnv);
 }
 
 // Draw Function
@@ -25,7 +26,7 @@ function draw() {
   smooth();
   strokeWeight(5);
   stroke(random(255));
-  
+
   for (var i = 0; i < waveform.length; i++){
     var x = map(i, 0, waveform.length, 0, width);
     var y = map(waveform[i], -1, 1, height, 0);
