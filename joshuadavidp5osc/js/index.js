@@ -40,7 +40,14 @@ function draw() {
 
   var amp = map(mouseY, 0, height, 1, .01);
   osc.amp(amp);
+}
 
+function toggleAudio(cnv) {
+  cnv.mouseOver(function() {
+  oscTri.start();
+  });
 
-
+  cnv.mouseOut(function() {
+  oscTri.stop();
+  });
 }
