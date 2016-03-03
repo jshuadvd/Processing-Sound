@@ -34,4 +34,9 @@ function draw() {
 
   var amp = map(mouseY, 0, height, 1, .01);
   osc.amp(amp);
+
+  if (mouseX > width) {
+    oscTri.stop();
+  }
+  
 }
