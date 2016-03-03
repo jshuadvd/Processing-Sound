@@ -39,4 +39,8 @@ function draw() {
     oscTri.stop();
   }
   
+  if (mouseY > height) {
+    oscTri.stop();
+  }
+
 }
