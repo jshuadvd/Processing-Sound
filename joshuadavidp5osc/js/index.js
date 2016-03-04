@@ -42,6 +42,7 @@ function draw() {
   osc.amp(amp);
 }
 
+// Turn on & off wave sound
 function toggleAudio(cnv) {
   cnv.mouseOver(function() {
   oscTri.start();
